@@ -1,0 +1,974 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unload unload_date="2022-08-04 10:02:16">
+<sys_cb_topic action="INSERT_OR_UPDATE">
+<applicability/>
+<applicability_mode>query</applicability_mode>
+<autopilot_topic>false</autopilot_topic>
+<category>3efd22da0b203300a1b16c2367673a10</category>
+<channels/>
+<connect_queue display_value=""/>
+<description>This contains all the basic information for the newly on-boarded cadidates.</description>
+<expose_on_palette>false</expose_on_palette>
+<flexible_conversation_switching>false</flexible_conversation_switching>
+<graph>{
+  "graph_api_version": "1.0.39",
+  "goals": {
+    "primary": {
+      "id": "primary",
+      "trigger": {
+        "type": "primary"
+      },
+      "name": "primary",
+      "applicability": "",
+      "description": "",
+      "nodes": {
+        "4490cf9902ed454588833bfd0fabb7a4": {
+          "id": "4490cf9902ed454588833bfd0fabb7a4",
+          "stepType": "Start",
+          "name": "Start",
+          "greetingResponse": {
+            "mode": "simple",
+            "value": ""
+          }
+        },
+        "b57718e8c2574dff8cab9271c45f467e": {
+          "id": "b57718e8c2574dff8cab9271c45f467e",
+          "stepType": "TerminateGoal",
+          "name": "End",
+          "confirmationMessage": {
+            "mode": "simple",
+            "value": ""
+          }
+        },
+        "54dc19d1454e4a3190d6fd58b70a9d1e": {
+          "id": "54dc19d1454e4a3190d6fd58b70a9d1e",
+          "stepType": "TextOutput",
+          "name": "Greetings",
+          "secure": false,
+          "value": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Welcome to Optum Global Solutions, United Health Group"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "78cc5470054247308d371d3365cdf9e8": {
+          "stepType": "ChoicePrompt",
+          "name": "Issue Choices",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Please select the area in which you are facing the issue."
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Thanks for choosing us, we are happy to help."
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "variableId": "9068d865259847758b99e302f82d4adc",
+          "id": "78cc5470054247308d371d3365cdf9e8",
+          "hasCardHeader": false,
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false
+        },
+        "e095af3565714a7faed0d29510e97c2f": {
+          "id": "e095af3565714a7faed0d29510e97c2f",
+          "stepType": "Decision",
+          "name": "Decision"
+        },
+        "686eb7e8c1d9441ca71d362e513c7ecc": {
+          "id": "686eb7e8c1d9441ca71d362e513c7ecc",
+          "stepType": "TextOutput",
+          "name": "Choice 1",
+          "secure": false,
+          "value": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Please find the list of action items that you have to complete -"
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "bulleted-list",
+                "children": [
+                  {
+                    "type": "list-item",
+                    "children": [
+                      {
+                        "text": ""
+                      },
+                      {
+                        "type": "link",
+                        "url": "https://example.com/",
+                        "children": [
+                          {
+                            "text": "Connect with Manage"
+                          }
+                        ]
+                      },
+                      {
+                        "text": "r "
+                      }
+                    ]
+                  },
+                  {
+                    "type": "list-item",
+                    "children": [
+                      {
+                        "text": ""
+                      },
+                      {
+                        "type": "link",
+                        "url": "https://example.com/",
+                        "children": [
+                          {
+                            "text": "Id / Password"
+                          }
+                        ]
+                      },
+                      {
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type": "list-item",
+                    "children": [
+                      {
+                        "text": ""
+                      },
+                      {
+                        "type": "link",
+                        "url": "https://example.com/",
+                        "children": [
+                          {
+                            "text": "Transport "
+                          }
+                        ]
+                      },
+                      {
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type": "list-item",
+                    "children": [
+                      {
+                        "text": ""
+                      },
+                      {
+                        "type": "link",
+                        "url": "https://example.com/",
+                        "children": [
+                          {
+                            "text": "Secure Access "
+                          }
+                        ]
+                      },
+                      {
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type": "list-item",
+                    "children": [
+                      {
+                        "text": ""
+                      },
+                      {
+                        "type": "link",
+                        "url": "https://example.com/",
+                        "children": [
+                          {
+                            "text": "SEZ ID Card / Emp ID card"
+                          }
+                        ]
+                      },
+                      {
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type": "list-item",
+                    "children": [
+                      {
+                        "text": ""
+                      },
+                      {
+                        "type": "link",
+                        "url": "https://example.com/",
+                        "children": [
+                          {
+                            "text": "Access for headset , mouse etc."
+                          }
+                        ]
+                      },
+                      {
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type": "list-item",
+                    "children": [
+                      {
+                        "text": ""
+                      },
+                      {
+                        "type": "link",
+                        "url": "https://example.com/",
+                        "children": [
+                          {
+                            "text": "Meal pass"
+                          }
+                        ]
+                      },
+                      {
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type": "list-item",
+                    "children": [
+                      {
+                        "text": ""
+                      },
+                      {
+                        "type": "link",
+                        "url": "https://example.com/",
+                        "children": [
+                          {
+                            "text": "IT Help Desk "
+                          }
+                        ]
+                      },
+                      {
+                        "text": ""
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Please select the choice,  this will redirect to the specified choice."
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "26e4fb6792244a13a799b6da7a8d77af": {
+          "id": "26e4fb6792244a13a799b6da7a8d77af",
+          "stepType": "Prompt",
+          "name": "Confirmation",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Do you still face an issue, create an incident ?"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "variableId": "b4dbb6904c264e18adebbbfcfbb7aa5c"
+        },
+        "a13445aff64940b097e8247825ce86e1": {
+          "id": "a13445aff64940b097e8247825ce86e1",
+          "stepType": "Decision",
+          "name": "Decision"
+        },
+        "f23b452e2cbf4477a2c877b077304088": {
+          "id": "f23b452e2cbf4477a2c877b077304088",
+          "stepType": "TextOutput",
+          "name": "End Greeting",
+          "secure": false,
+          "value": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Thanks for using onbaording bot ",
+                    "bold": true
+                  },
+                  {
+                    "type": "emoji",
+                    "emoji": {
+                      "id": "grinning",
+                      "name": "Grinning Face",
+                      "short_names": [
+                        "grinning"
+                      ],
+                      "colons": ":grinning:",
+                      "emoticons": [],
+                      "unified": "1f600",
+                      "skin": null,
+                      "native": "😀"
+                    },
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "text": ". We are happy to help.",
+                    "bold": true
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "ec70f2f5187b44e2a95a3ba920eda534": {
+          "id": "ec70f2f5187b44e2a95a3ba920eda534",
+          "stepType": "ReusableTopic",
+          "name": "Create Incident",
+          "fields": [],
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "reusableTopicChoice": "Create Incident",
+          "reusableTopicId": "ef2d8306737333003ade8889faf6a790",
+          "inputs": {
+            "caller": {
+              "value": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    },
+                    {
+                      "type": "datapill",
+                      "dataPill": {
+                        "value": "{{vaInputs.user}}",
+                        "displayValue": "Input Variables➛User"
+                      },
+                      "children": [
+                        {
+                          "text": ""
+                        }
+                      ]
+                    },
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ],
+              "mode": "string",
+              "type": "String"
+            },
+            "short_description": {
+              "value": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    },
+                    {
+                      "type": "datapill",
+                      "dataPill": {
+                        "value": "{{vaInputs.short_description}}",
+                        "displayValue": "Input Variables➛Short Description"
+                      },
+                      "children": [
+                        {
+                          "text": ""
+                        }
+                      ]
+                    },
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ],
+              "mode": "string",
+              "type": "String"
+            },
+            "urgency": {
+              "value": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ],
+              "mode": "string",
+              "type": "String"
+            },
+            "description": {
+              "value": "",
+              "mode": "simple",
+              "type": "String"
+            },
+            "cmdb_ci": {
+              "value": "",
+              "mode": "simple",
+              "type": "String"
+            }
+          },
+          "outputs": [
+            {
+              "id": "4ba54da0f64145c28af45242db99f40c",
+              "value": "created_incident_sys_id",
+              "mapping": "created_incident_sys_id",
+              "preventDisable": false
+            }
+          ],
+          "variableIds": [
+            "4ba54da0f64145c28af45242db99f40c"
+          ],
+          "outdatedNote": false,
+          "loading": false
+        },
+        "c986a006ad394a2daa8be099ac1283dc": {
+          "id": "c986a006ad394a2daa8be099ac1283dc",
+          "stepType": "Prompt",
+          "name": "Short Description",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Please enter short description for the issue."
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "variableId": "f14af725651648e5826dddd4fddfdeb8",
+          "inputType": {
+            "format": "Text",
+            "script": ""
+          }
+        },
+        "8945acc7142d40e792fddf9bc3163124": {
+          "id": "8945acc7142d40e792fddf9bc3163124",
+          "stepType": "TextOutput",
+          "name": "Choice 2",
+          "secure": false,
+          "value": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Please find the list of issues -"
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "For mandatory trainings check – "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://example.com/",
+                    "children": [
+                      {
+                        "text": "LearnSource."
+                      }
+                    ]
+                  },
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "For global service desk check – "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://example.com/",
+                    "children": [
+                      {
+                        "text": "GSS"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "."
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "For payroll check - "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://example.com/",
+                    "children": [
+                      {
+                        "text": "AllSec Portal"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "."
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "For attendance check  "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://example.com/",
+                    "children": [
+                      {
+                        "text": "PPMO Optics"
+                      }
+                    ]
+                  },
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "For all-in-one portal - "
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://example.com/",
+                    "children": [
+                      {
+                        "text": "Sparq"
+                      }
+                    ]
+                  },
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        }
+      },
+      "edges": [
+        {
+          "id": "c25fa815bedf49aea5fa740783d1b181",
+          "edgeType": "Branch",
+          "source": "e095af3565714a7faed0d29510e97c2f",
+          "target": "686eb7e8c1d9441ca71d362e513c7ecc",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.issue_choices=1",
+            "mode": "query"
+          },
+          "label": "Choice 1"
+        },
+        {
+          "id": "90e8ebe0b9f64b65bff9577c71f38dc7",
+          "edgeType": "Edge",
+          "source": "4490cf9902ed454588833bfd0fabb7a4",
+          "target": "54dc19d1454e4a3190d6fd58b70a9d1e",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "f26635f4b7764c199d6516693a77f3ae",
+          "edgeType": "Edge",
+          "source": "54dc19d1454e4a3190d6fd58b70a9d1e",
+          "target": "78cc5470054247308d371d3365cdf9e8",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "3e821d38a1564cd1b8153db192fc7533",
+          "edgeType": "Edge",
+          "source": "78cc5470054247308d371d3365cdf9e8",
+          "target": "e095af3565714a7faed0d29510e97c2f",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "ad41d76374e44633be5214e452a25f68",
+          "edgeType": "Edge",
+          "source": "686eb7e8c1d9441ca71d362e513c7ecc",
+          "target": "26e4fb6792244a13a799b6da7a8d77af",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "1297670b318447cc8fe3ad4f51348403",
+          "edgeType": "Edge",
+          "source": "26e4fb6792244a13a799b6da7a8d77af",
+          "target": "a13445aff64940b097e8247825ce86e1",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "4f7120c743464e038129804fa26df336",
+          "edgeType": "Branch",
+          "source": "a13445aff64940b097e8247825ce86e1",
+          "target": "f23b452e2cbf4477a2c877b077304088",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.confirmation=",
+            "mode": "query"
+          },
+          "label": "No"
+        },
+        {
+          "id": "fa1371211cb14fbbad518d3cf94fa0d5",
+          "edgeType": "Edge",
+          "source": "f23b452e2cbf4477a2c877b077304088",
+          "target": "b57718e8c2574dff8cab9271c45f467e",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "0c7a39c49a2341b7b5111121b962b095",
+          "edgeType": "Edge",
+          "source": "ec70f2f5187b44e2a95a3ba920eda534",
+          "target": "f23b452e2cbf4477a2c877b077304088",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "76b917a22d86460992857f2ea269b370",
+          "edgeType": "Branch",
+          "source": "a13445aff64940b097e8247825ce86e1",
+          "target": "c986a006ad394a2daa8be099ac1283dc",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.confirmation=true",
+            "mode": "query"
+          },
+          "label": "Yes"
+        },
+        {
+          "id": "c4055c20590441459ec7e1c5f04f3257",
+          "edgeType": "Edge",
+          "source": "c986a006ad394a2daa8be099ac1283dc",
+          "target": "ec70f2f5187b44e2a95a3ba920eda534",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "e739975b4f374edca2a73fa78c78a32b",
+          "edgeType": "Branch",
+          "source": "e095af3565714a7faed0d29510e97c2f",
+          "target": "8945acc7142d40e792fddf9bc3163124",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.issue_choices=2",
+            "mode": "query"
+          },
+          "label": "Choice 2"
+        },
+        {
+          "id": "8767286714cb47ef918b9fcd12184238",
+          "edgeType": "Edge",
+          "source": "8945acc7142d40e792fddf9bc3163124",
+          "target": "26e4fb6792244a13a799b6da7a8d77af",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "1d48ffc547d6498cb04928e46138d4ee",
+          "edgeType": "Branch",
+          "source": "e095af3565714a7faed0d29510e97c2f",
+          "target": "c986a006ad394a2daa8be099ac1283dc",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.issue_choices=6",
+            "mode": "query"
+          },
+          "label": "Choice 3"
+        }
+      ]
+    }
+  },
+  "variables": {
+    "current-user": {
+      "category": "vaInputs",
+      "id": "current-user",
+      "label": "User",
+      "name": "user",
+      "table": "sys_user",
+      "varType": "reference"
+    },
+    "9068d865259847758b99e302f82d4adc": {
+      "id": "9068d865259847758b99e302f82d4adc",
+      "name": "issue_choices",
+      "label": "Issue Choices",
+      "varType": "choice",
+      "choices": [
+        {
+          "label": "Post Onboarding Actions",
+          "value": "1"
+        },
+        {
+          "label": "Compensation, Attendance, Service Desk ",
+          "value": "2",
+          "checked": true
+        },
+        {
+          "label": "Claims &amp; Reimbursement Section",
+          "value": "3",
+          "checked": true
+        },
+        {
+          "label": "All Learnings",
+          "value": "4",
+          "checked": true
+        },
+        {
+          "label": "Internal Job Posting",
+          "value": "5",
+          "checked": true
+        },
+        {
+          "label": "Other Issues",
+          "value": "6",
+          "checked": true
+        }
+      ],
+      "category": "vaInputs"
+    },
+    "b4dbb6904c264e18adebbbfcfbb7aa5c": {
+      "id": "b4dbb6904c264e18adebbbfcfbb7aa5c",
+      "name": "confirmation",
+      "label": "Confirmation",
+      "varType": "boolean",
+      "secure": false,
+      "category": "vaInputs"
+    },
+    "f14af725651648e5826dddd4fddfdeb8": {
+      "id": "f14af725651648e5826dddd4fddfdeb8",
+      "name": "short_description",
+      "label": "Short Description",
+      "varType": "string",
+      "secure": false,
+      "category": "vaInputs",
+      "encryptionHashFunction": "SHA-256",
+      "encryptionSalt": {
+        "value": "MTY1OTM1NDI4MDY2MCBWQSBEZXNpZ25lciBpcyBhd2Vzb21l",
+        "mode": "simple"
+      }
+    },
+    "4ba54da0f64145c28af45242db99f40c": {
+      "id": "4ba54da0f64145c28af45242db99f40c",
+      "name": "created_incident_sys_id",
+      "label": "Created_incident_sys_id",
+      "defaultValue": "created_incident_sys_id",
+      "varType": "string",
+      "category": "vaInputs",
+      "metadata": {
+        "libraryMappingType": "output"
+      },
+      "preventDisable": false
+    }
+  }
+}</graph>
+<key_phrases>Onboarding BOT</key_phrases>
+<library>false</library>
+<live_agent>false</live_agent>
+<name>Onboarding BOT</name>
+<nlu_intent/>
+<nlu_intent_label/>
+<nlu_model/>
+<nlu_model_label/>
+<nlu_provider/>
+<palette_label/>
+<roles/>
+<secure_custom_input_control>false</secure_custom_input_control>
+<source_topic_id/>
+<sys_class_name>sys_cb_topic</sys_class_name>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2022-07-27 09:46:48</sys_created_on>
+<sys_domain>global</sys_domain>
+<sys_id>596bc80897451110340abde3f153af72</sys_id>
+<sys_mod_count>38</sys_mod_count>
+<sys_name>Onboarding BOT</sys_name>
+<sys_package display_value="Global" source="global">global</sys_package>
+<sys_policy/>
+<sys_scope display_value="Global">global</sys_scope>
+<sys_update_name>sys_cb_topic_596bc80897451110340abde3f153af72</sys_update_name>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2022-08-04 06:53:01</sys_updated_on>
+<triggerable_by_notification>false</triggerable_by_notification>
+<type>STANDARD</type>
+<variables/>
+</sys_cb_topic>
+</unload>
